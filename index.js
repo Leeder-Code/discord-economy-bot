@@ -210,8 +210,7 @@ if(command===`${prefix}coinflip` && content[2]!=="head" && content[2]!=="tails")
     return message.channel.send(coinfliphelp)
 }
 if(command===`${prefix}leaderboard`){
-    let leaders = Money.find().sort( { money: 1 } )
-    console.log(leaders.tree)
+  //idk na dzis
 }
 })
 bot.login(botconfig.token)
