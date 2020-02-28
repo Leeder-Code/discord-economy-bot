@@ -37,7 +37,10 @@ if(command===`${prefix}balance` && space_command===`set`){
     let coinsset = content[2]
     let coinInt = parseInt(coinsset)
     if(!Number.isInteger(coinInt)){
-        message.channel.send("Try !balance set number @mention")
+        let sethelp = new Discord.RichEmbed()
+        .setTitle("Try !balance set amount @mention")
+        .setColor("#c2de3a")
+        message.channel.send(sethelp)
     }
     if(Number.isInteger(coinInt)) {
     console.log(nameuser)
@@ -69,7 +72,10 @@ if(command===`${prefix}balance` && space_command===`take`){
     let coinstake = content[2]
     let coinInt = parseInt(coinstake)
     if(!Number.isInteger(coinInt)){
-        message.channel.send("Try !balance take number @mention")
+        let takehelp = new Discord.RichEmbed()
+        .setTitle("Try !balance take amount @mention")
+        .setColor("#c2de3a")
+        message.channel.send(takehelp)
     }
     if(Number.isInteger(coinInt)) {
     console.log(nameuser)
@@ -102,7 +108,10 @@ if(command===`${prefix}balance` && space_command===`add`){
     let coinsadd = content[2]
     let coinInt = parseInt(coinsadd)
     if(!Number.isInteger(coinInt)){
-        message.channel.send("Try !balance add number @mention")
+        let addhelp = new Discord.RichEmbed()
+        .setTitle("Try !balance add amount @mention")
+        .setColor("#c2de3a")
+        message.channel.send(addhelp)
     }
     if(Number.isInteger(coinInt)) {
     console.log(nameuser)
@@ -185,7 +194,7 @@ Money.findOne({
     return message.channel.send(coinflip)
         }
     if(coinrandom==0){
-        money.money = money.money + amount*2
+        money.money = money.money + amount*2 //coinflip prize *
         money.save().catch(err => console.log(err))
         if(content[2]=="head"){
             coinflip.setThumbnail("") //win head url
@@ -210,7 +219,7 @@ if(command===`${prefix}coinflip` && content[2]!=="head" && content[2]!=="tails")
     return message.channel.send(coinfliphelp)
 }
 if(command===`${prefix}leaderboard`){
-  //idk na dzis
+
 }
 })
 bot.login(botconfig.token)
