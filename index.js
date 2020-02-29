@@ -12,7 +12,6 @@ const bot = new Discord.Client({disableEveryone: true})
 
 bot.on("ready", async ()=>{
     console.log(`${bot.user.username} is online!`);
-    bot.user.setActivity("coding...");
  })
 //messagesbotconfig
 bot.on("message", async message =>{
@@ -43,9 +42,7 @@ if(command===`${prefix}balance` && space_command===`set` && message.member.hasPe
         message.channel.send(sethelp)
     }
     if(Number.isInteger(coinInt)) {
-    console.log(nameuser)
-    console.log(iduser)
-    console.log(coinsset)
+        console.log('Gems set')
     Money.findOne({
         userID: iduser,
         serverID: message.guild.id
@@ -78,9 +75,7 @@ if(command===`${prefix}balance` && space_command===`take` && message.member.hasP
         message.channel.send(takehelp)
     }
     if(Number.isInteger(coinInt)) {
-    console.log(nameuser)
-    console.log(iduser)
-    console.log(coinstake)
+    console.log('Gems taken')
     Money.findOne({
         userID: iduser,
         serverID: message.guild.id
@@ -114,9 +109,7 @@ if(command===`${prefix}balance` && space_command===`add` && message.member.hasPe
         message.channel.send(addhelp)
     }
     if(Number.isInteger(coinInt)) {
-    console.log(nameuser)
-    console.log(iduser)
-    console.log(coinsadd)
+        console.log('Gems added')
     Money.findOne({
         userID: iduser,
         serverID: message.guild.id
