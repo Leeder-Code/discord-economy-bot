@@ -1,4 +1,5 @@
 {
-"token": ">bot token here<",
-"prefix": "!"
-}
+    "token": ">bot token here<",
+    "prefix": "!"
+    }
+    
