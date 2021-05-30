@@ -3,7 +3,7 @@ const Discord = require("discord.js")
 const mongoose = require("mongoose")
 const Money = require("./models/money.js")
 
-mongoose.connect('mongodb+srv://root:rootToor@cluster0-c9atl.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('', { //mongodb connect here
     useNewUrlParser: true,
     useUnifiedTopology: true
 })
